@@ -24,8 +24,6 @@ Las IPs de los servicios son garantizadas, estas en teoria no deberian cambiar, 
 
 Por defecto si no especificamos un tipo de servicio va a ser ClusterIP
 
-
-
 Para crear ejecutar el servicio de tipo ClusterIP
 
 ```
@@ -65,8 +63,6 @@ kubectl describe svc <serviceName>
 Link del video en Youtube 
 
 [Servicios en Kubernetes](https://youtu.be/GfqRKvOgd8E)
-
-
 
 Mi pagina web:
 
