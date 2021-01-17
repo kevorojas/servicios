@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-cluster
+  labels:
+    app: interno
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: interno
+  template:
+    metadata:
+      labels:
+        app: interno
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-cluster
+  labels:
+    app: interno
+spec:
+  selector:
+    app: interno
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80

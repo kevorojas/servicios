@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-externo
+  labels:
+    app: externo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: externo
+  template:
+    metadata:
+      labels:
+        app: externo
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-externo
+  labels:
+    app: externo
+spec:
+  type: NodePort
+  selector:
+    app: externo
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
