@@ -62,7 +62,7 @@ kubectl describe svc <serviceName>
 
 Link del video en Youtube 
 
-[Servicios en Kubernetes](https://youtu.be/GfqRKvOgd8E)
+[Servicios en Kubernetes](https://youtu.be/poUAt4_u5AE)
 
 Mi pagina web:
 
